@@ -1,2 +1,3 @@
 # g711-go
-Package vpx provides Go bindings for g711 in WebRTC.
+
+Package g711 provides Go bindings for g711 in WebRTC.
