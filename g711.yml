@@ -1,0 +1,14 @@
+---
+GENERATOR:
+  PackageName: g711
+  PackageDescription: "Package g711 provides Go bindings for g711 in WebRTC"
+  PackageLicense: "MIT"
+  Includes: ["g711/g711.h", "g711/g711_interface.h"]
+
+PARSER:
+  IncludePaths: ["/usr/include", "/usr/local/include"]
+  SourcesPaths: ["g711/g711/g711.h", "g711/g711/g711_interface.h"]
+
+TRANSLATOR:
+  ConstRules:
+    defines: eval
