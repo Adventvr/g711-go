@@ -12,3 +12,19 @@ PARSER:
 TRANSLATOR:
   ConstRules:
     defines: eval
+  PtrTips:
+    function:
+      - {target: ^WebRtcG711_EncodeA$, tips: [arr, 0, arr]}
+      - {target: ^WebRtcG711_EncodeU$, tips: [arr, 0, arr]}
+      - {target: ^WebRtcG711_DecodeA$, tips: [arr, 0, arr, ref]}
+      - {target: ^WebRtcG711_DecodeU$, tips: [arr, 0, arr, ref]}
+  Rules:
+    global:
+      - {transform: export}
+    function:
+      - {action: accept, from: "^WebRtcG711_"}
+      - {action: replace, from: "^WebRtcG711_", to: _}
+    private:
+      - {transform: unexport}
+    post-global:
+      - {load: snakecase}
